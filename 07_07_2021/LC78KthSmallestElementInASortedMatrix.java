@@ -1,7 +1,7 @@
 class LC78KthSmallestElementInASortedMatrix {
     public int kthSmallest(int[][] matrix, int k) {
         
-        // idea: 最小值永远出现在当前最小值的左下方或者已经被加入到pq中的元素
+        // idea: 最小值永远出现在当前最小值的下方/右方或者已经被加入到pq中的元素
         int m = matrix.length;
         int n = matrix[0].length;
        
