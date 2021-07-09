@@ -26,7 +26,6 @@ public class LC300LongestIncreasingSubsequence {
             // System.out.println(tails);
         }
 
-
         return tails.size();
 
         // DP solution(n^2): dp[i] = dp[j] + 1, j = the max index in dp array where nums[j] < nums[i]
