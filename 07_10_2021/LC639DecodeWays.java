@@ -1,4 +1,4 @@
-class LC91DecodeWays {
+class LC639DecodeWays {
     public int numDecodings(String s) {
         if (s == null || s.length() == 0) return 0;
         final long MOD = 1000000007;
