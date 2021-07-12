@@ -1,4 +1,4 @@
-class MedianFinder {
+class LC295FindMedianFromDataStream {
     Queue<Integer> min;
     Queue<Integer> max;
     // the whole data can be constructed by max + min, median can be found by checking max.peek and min.peek
