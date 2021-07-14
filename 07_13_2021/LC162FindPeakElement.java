@@ -14,6 +14,6 @@ class LC162FindPeakElement {
                 right = mid;
             }
         }
-        return nums[left] > nums[right] ? left : right;
+        return left;
     }
 }
