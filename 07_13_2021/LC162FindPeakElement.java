@@ -1,6 +1,6 @@
 class LC162FindPeakElement {
     public int findPeakElement(int[] nums) {
-        // use binray search to get the first/last element that less than its next element
+        // use binray search to get the first/last element that is greater than its next element util end
         // eg: 1 5 3 4 7 5 -> get 7
         // eg: 1 5 3 4 7 9 -> get 9
         if (nums.length == 1) return 0;
