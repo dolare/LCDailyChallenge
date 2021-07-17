@@ -11,7 +11,7 @@ class LC927ThreeEqualParts {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 1) count1++;
         }
-        
+        // corner cases
         if (count1 % 3 != 0) return res;
         if (count1 == 0) return new int[]{0, arr.length - 1};
         count1 = count1 / 3;
@@ -21,6 +21,7 @@ class LC927ThreeEqualParts {
         String strLeft = "", strRight = "", strMid = "";
         StringBuilder strRightBuilder = new StringBuilder();
         // 0001110000(left) 01110000 0000 (right)11110000
+        // start calculate right0 needed
         while(rightCount1 < count1) {
             strRightBuilder.append(arr[right]);
             if (arr[right--] == 1) {
@@ -54,9 +55,8 @@ class LC927ThreeEqualParts {
                 leftRealCount0++;
             }
         }
-        System.out.println(leftRealCount0 + " " + rightRealCount0);
+        // System.out.println(leftRealCount0 + " " + rightRealCount0);
         // System.out.println(leftCount1 + " " + rightCount1 + " " + leftRealCount0 + " " + rightRealCount0);
-         
         int midStart = left, midEnd = right, midCount1 = 0, midReacCount0 = 0;
         // ingore useless mid0
         while(arr[midStart] == 0 && midStart < midEnd) {
@@ -71,11 +71,6 @@ class LC927ThreeEqualParts {
             }
         }
         // System.out.println(strLeft + " " + strRight + " " + strMid);
-
-        return res;
-        
-        
-        
-         
+        return res;   
     }
 }
