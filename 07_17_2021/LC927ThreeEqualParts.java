@@ -1,5 +1,10 @@
 class LC927ThreeEqualParts {
     public int[] threeEqualParts(int[] arr) {
+        
+        // approach:  calculate the how many 1 needed for each segment
+        // => calculate how many 0 needed by from right segmnet to determin rightStartIndex =>
+        // => calculate the leftEndIndex using the count1 and count0 we alrady got
+        // => validate the mid segment elements to check if all three segmentString are the same
         int count1 = 0;
         int[] res = {-1, -1};
         
