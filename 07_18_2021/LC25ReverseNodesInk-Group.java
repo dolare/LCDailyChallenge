@@ -50,9 +50,7 @@ class Solution {
             System.out.println("temp" + tempK);
             if (tempK == 0) nodes.get(0).next = newCurr; // has enough elements
             else nodes.get(0).next = curr; // no enough elements
-            
-            // System.out.println("tail: " + newCurr.val);
-            
+            // System.out.println("tail: " + newCurr.val); 
         }
 
         return newHead;
