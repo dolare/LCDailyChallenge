@@ -20,10 +20,8 @@ class Solution {
         root.left = pruneTree(root.left);
         root.right = pruneTree(root.right);
         // set left/right -> null when it is 0 from leaf to the root
-        if (root.left == null && root.right == null) {
-            if (root.val == 0) {
-                return null;
-            }
+        if (root.left == null && root.right == null && root.val == 0) {
+            return null;
         }
         return root;
     }
