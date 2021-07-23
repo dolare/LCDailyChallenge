@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/07_04_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_05_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_06_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_07_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_08_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_09_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_10_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_11_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_12_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_13_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_14_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_15_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_16_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_17_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_18_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_19_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_20_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_21_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_22_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_23_2021" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
