@@ -13,9 +13,6 @@ class LC915PartitionArrayIntoDisjointIntervals {
             }
         }
         return res;
-        
-        
-        
         // O(n) + O(n) solution
         // int[] maxLeft = new int[nums.length];
         // int[] minRight = new int[nums.length];
