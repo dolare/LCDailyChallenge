@@ -15,9 +15,9 @@ public class LC600NonnegativeIntegersWithoutConsecutiveOnes {
         String str = intToBinaryString(n);
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '0') continue;
-            res += dp[str.length() - i - 1];
-            if (i > 0 && str.charAt(i - 1) == '1') {
+            if (str.charAt(i) == '0') continue; 
+            res += dp[str.length() - i - 1]; // only take care **100000 -> **011111, res += dp[5]
+            if (i > 0 && str.charAt(i - 1) == '1') { // *** 11 *** will be illegacl
                 return res;
             }
 
