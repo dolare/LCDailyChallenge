@@ -1,5 +1,49 @@
 class LC542_01Matrix {
+    public int[][] updateMatrix0(int[][]) {
+        // dp solution:
+        // fomular: dp[i][j] = Math.min(dp[newI][newJ]);  newI and newJ coming from four different directions
+        // we can start from left top then can determin direction right and down
+        // then scan from right bottom then can deternmin direction left and up
+        int m = mat.length, n = mat[0].length;
+        int[][] directionRightDown = {{-1, 0}, {0, -1}};
+        int[][] directionLeftUp = {{0, 1}, {1, 0}};
+        int[][] dp = new int[m][n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                dp[i][j] = mat[i][j] == 0 ? 0 : 1000000;
+            }
+        }
+        
+        // to right and down
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int[] direction: directionRightDown) {
+                    int newI = i + direction[0], newJ = j + direction[1];
+                    if (newI >= 0  && newJ >= 0) {
+                        dp[i][j] = Math.min(dp[i][j], dp[newI][newJ] + 1);
+                    }
+                }
+            }
+        }
+        
+        // to right and down
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                for (int[] direction: directionLeftUp) {
+                    int newI = i + direction[0], newJ = j + direction[1];
+                    if (newI < m && newJ < n) {
+                        dp[i][j] = Math.min(dp[i][j], dp[newI][newJ] + 1);
+                    }
+                }
+            }
+        }
+        
+        return dp;
+    }
+    
     public int[][] updateMatrix(int[][] mat) {
+        // BFS Solution, should push all 0 position to the queue, then can avoid many duplicate calculation.
         Map<String, Integer> visited = new HashMap();
         int m = mat.length, n = mat[0].length;
         int[][] res = new int[m][n];
@@ -32,7 +76,6 @@ class LC542_01Matrix {
                 int currI = Integer.valueOf(position.split(",")[0]), currJ = Integer.valueOf(position.split(",")[1]);
                 
                 if (mat[currI][currJ] == 0) {
-                    // System.out.println("found");
                     return steps;
                 }
                 currLevel.add(position);
