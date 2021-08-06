@@ -29,6 +29,21 @@ public class LC877StoneGame {
         mem[i][j] = Math.max(alexPickLeft - leePickThenLeft, alexPickRight - leePickThenRight);
 
         return mem[i][j] ;
+    }
 
+    // DP Solution:
+    // dp[i][j] represents how many scores alex can take more than lee, when alex is picking on i or j
+    // dp[i][j] = math.max(piles[i] - dp[i + 1][j], piles[j] - dp[i][j - 1])
+    public boolean stoneGameDP(int[] piles) {
+        int n = piles.length;
+        int[][] dp = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int l = 0; l < n; l++) {
+                int r = n - l - 1;
+                dp[l][r] = Math.max(piles[l] - (r - 1 < 0 ? 0 : dp[l][r - 1]),
+                        piles[r] - (l + 1 == n ? 0 : dp[l + 1][r]));
+            }
+        }
+        return dp[0][n - 1] > 0;
     }
 }
