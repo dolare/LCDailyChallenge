@@ -3,7 +3,7 @@ public class LC132PalindromePartitioningII {
 
         // DP solution:
         // dp[i] -> the mincut for the substring(0, i)
-        // dp[i] = Math.min(dp[0]....d[i]) + 1 only when substring(i, n - 1) is palindrom
+        // dp[i] = Math.min(dp[0]....d[j]) + 1 only when substring(j + 1, i) is palindrom
 
         int n = s.length();
         int[] dp = new int[n];
